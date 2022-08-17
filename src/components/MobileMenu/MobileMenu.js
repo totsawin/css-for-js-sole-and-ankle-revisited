@@ -17,14 +17,14 @@ const MobileMenu = ({ isOpen, onDismiss }) => {
   return (
     <Overlay>
       <Content>
-        <DismissWrapper>
-          <DismissButton onClick={onDismiss}>
-            <VisuallyHidden>
-              Dismiss menu
-            </VisuallyHidden>
-            <Icon id="close"/>
-          </DismissButton>
-        </DismissWrapper>
+        <DismissButton onClick={onDismiss}>
+          <VisuallyHidden>
+            Dismiss menu
+          </VisuallyHidden>
+          <Icon id="close"/>
+        </DismissButton>
+        <Filler>
+        </Filler>
         <Nav>
           <Link href="/sale">Sale</Link>
           <Link href="/new">New&nbsp;Releases</Link>
@@ -63,9 +63,8 @@ const Content = styled(DialogContent)`
   background: var(--color-white);
 `;
 
-const DismissWrapper = styled.div`
+const Filler = styled.div`
   flex: 1;
-  position: relative:
 `;
 
 const DismissButton = styled.button`
@@ -82,8 +81,7 @@ const Nav = styled.nav`
   list-style: none;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-content: start;
+  gap: 1rem;
 `;
 
 const Link = styled.a`
@@ -92,7 +90,6 @@ const Link = styled.a`
   text-decoration: none;
   color: var(--color-gray-900);
   font-weight: ${WEIGHTS.medium};
-  line-height: 2;
 
   &:first-of-type {
     color: var(--color-secondary);
