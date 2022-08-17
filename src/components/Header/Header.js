@@ -84,9 +84,9 @@ const MainHeader = styled.div`
 const DesktopNav = styled.nav`
   display: flex;
   gap: clamp(
-    2rem,
-    2vw + 1rem,
-    3rem
+    1rem,
+    9.2vw - 4.5rem,
+    3.5rem
   );
   margin: 0px ${48/16}rem;
   @media ${QUERIES.tabletAndBelow} {
